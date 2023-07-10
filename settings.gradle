@@ -2,9 +2,13 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
         gradlePluginPortal()
         maven {
-            url "https://jitpack.io"
+              url "https://jitpack.io"
+          }
+        maven {
+            url 'https://s3.amazonaws.com/salesforcesos.com/android/maven/release'
         }
     }
 }
@@ -13,8 +17,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
         maven {
             url "https://jitpack.io"
+        }
+        maven {
+            url 'https://s3.amazonaws.com/salesforcesos.com/android/maven/release'
         }
     }
 }

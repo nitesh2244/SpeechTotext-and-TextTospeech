@@ -7,12 +7,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.speechtotextdemo.model.ApiResponse
 import com.example.speechtotextdemo.model.ErrorResponse
-import com.example.speechtotextdemo.network.ApiService
 import com.example.speechtotextdemo.network.RetrofitClient.apiService
+import com.example.speechtotextdemo.repo.UserRepo
 import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
+
 
 class MyViewModel : ViewModel() {
 
@@ -22,7 +25,7 @@ class MyViewModel : ViewModel() {
 
     fun fetchData() {
 
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.Main) {
             try {
                 val postId = 1
                 val response = apiService.getApiDataByID(postId)
@@ -48,4 +51,13 @@ class MyViewModel : ViewModel() {
             }
         }
     }
+
+    /*  fun fetchUserData(a: Int) {
+          viewModelScope.launch {
+              _apiData.value = userRepo.getData(a).body()
+          }
+
+      }*/
+
+
 }

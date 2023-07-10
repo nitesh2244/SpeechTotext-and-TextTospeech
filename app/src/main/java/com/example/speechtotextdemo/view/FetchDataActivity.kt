@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.speechtotextdemo.R
@@ -13,6 +14,9 @@ import com.example.speechtotextdemo.adapter.GetAdapter
 import com.example.speechtotextdemo.databinding.ActivityFetchDataBinding
 import com.example.speechtotextdemo.model.ApiResponse
 import com.example.speechtotextdemo.viewmodel.MyViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class FetchDataActivity : AppCompatActivity() {
 
@@ -25,6 +29,7 @@ class FetchDataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fetch_data)
+
         viewModel = ViewModelProvider(this)[MyViewModel::class.java]
 
         viewModel.apiData.observe(this, Observer {
@@ -32,7 +37,11 @@ class FetchDataActivity : AppCompatActivity() {
             initRecycler(it)
 
         })
+
         viewModel.fetchData()
+        //viewModel.fetchUserData(1)
+
+
     }
 
     private fun initRecycler(list: List<ApiResponse>) {
@@ -45,4 +54,5 @@ class FetchDataActivity : AppCompatActivity() {
         adapter = GetAdapter(this, list)
         binding.rvUserData.adapter = adapter
     }
+
 }
