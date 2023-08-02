@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#DA1515</color>
     <color name="transparent_real">#00ffffff</color>
+    <color name="sky_blue">#3AA8F1</color>
+    <color name="disable_button">#CFD8CD</color>
 
 </resources>

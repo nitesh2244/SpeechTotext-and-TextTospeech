@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SpeechToTextDemo</string>
+    <string name="app_name">MirarAI</string>
     <string name="title_activity_chat_bot">ChatBotActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -43,4 +43,14 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
+
+    <string name="login_text">Increase your knowledge and \npossibilities with just one click - login\nnow!</string>
+    <string name="signup_text">Ready to elevate your skills? - Sign up\nand get started</string>
+    <string name="enter_email">please enter email</string>
+    <string name="valid_email">please enter valid email</string>
+    <string name="enter_password">please enter password</string>
+    <string name="password_length">password must be at least 6 characters long.</string>
+    <string name="enter_name">please enter your name</string>
+    <string name="password_not_match">passwords do not match.</string>
 </resources>

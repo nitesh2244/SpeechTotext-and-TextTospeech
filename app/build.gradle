@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.speechtotextdemo'
+    namespace 'com.example.mirarai'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.speechtotextdemo"
+        applicationId "com.example.mirarai"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -64,9 +64,21 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
     implementation 'com.google.code.gson:gson:2.8.8'
 
-    implementation 'com.salesforce.service:chat-ui:4.3.5'
-
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //http
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+    //animation
+    implementation 'com.airbnb.android:lottie:6.1.0'
+
+    //Dimen
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+
 
 
 

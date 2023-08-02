@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="#3AA8F1" /> <!-- Set the background color of the bubble -->
-    <corners android:bottomRightRadius="8dp"
-        android:topLeftRadius="8dp"
-        android:topRightRadius="8dp"/> <!-- Set the corner radius of the bubble -->
+    <corners android:bottomRightRadius="18dp"
+        android:bottomLeftRadius="18dp"/> <!-- Set the corner radius of the bubble -->
 </shape>
